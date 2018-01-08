@@ -4,5 +4,13 @@
   <artifactId>AutomationPractice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
+  <!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20171018</version>
+</dependency>
+  
   </dependencies>
+  
 </project>

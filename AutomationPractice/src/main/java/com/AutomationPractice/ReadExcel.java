@@ -16,16 +16,16 @@ public class ReadExcel {
 	public String getValueFromExcel(String excelKey) {
 		Workbook workbook = null;
 		try {
-			FileInputStream inputStream = new FileInputStream(new File(System.getProperty("user.dir")+"/src/main/resources/TestData/Data.xls"));
+			FileInputStream inputStream = new FileInputStream(
+					new File(System.getProperty("user.dir") + "/src/main/resources/TestData/Data.xls"));
 			workbook = new HSSFWorkbook(inputStream);
 			HSSFSheet sheet = (HSSFSheet) workbook.getSheetAt(0);
 			DataFormatter formatter = new DataFormatter();
 			ArrayList<String> keys = new ArrayList<>();
 			ArrayList<String> values = new ArrayList<>();
 			HashMap<String, String> map = new HashMap<>();
-			
-			
-			for(int i=0;i<=sheet.getLastRowNum();i++){
+
+			for (int i = 0; i <= sheet.getLastRowNum(); i++) {
 				String key;
 				String value;
 				key = formatter.formatCellValue(sheet.getRow(i).getCell(0));
@@ -38,12 +38,11 @@ public class ReadExcel {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			try {
 				workbook.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			}
 		}

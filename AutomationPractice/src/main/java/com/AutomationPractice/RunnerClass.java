@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources/featureFiles"
 		,glue={"src/test/java"}
 		)
- // Kunal is learning
+
 public class RunnerClass {
 
 }

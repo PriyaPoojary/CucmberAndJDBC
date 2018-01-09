@@ -1,20 +1,8 @@
-
 Feature: Title of your feature
 
-  Scenario: of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    Then I validate the outcomes
-    And check more outcomes
+  Background: 
+    Given WebDriver is initialized 
+    And am able to Login "https://aso.com"
 
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+  Scenario: abc
+    Given acc

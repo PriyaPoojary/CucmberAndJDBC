@@ -4,8 +4,12 @@ import com.AutomationPractice.ReadExcel;
 
 public class ScenarioContext {
 
-
-	ScenarioContext() {
-
+	public ReadExcel readExcel;
+	public LoginPage loginPage;
+	public String url;
+	
+	public ScenarioContext(){
+		readExcel = new ReadExcel();
+		url = new String();
 	}
 }

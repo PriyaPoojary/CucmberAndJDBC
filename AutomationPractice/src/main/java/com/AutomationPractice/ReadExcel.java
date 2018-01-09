@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Workbook;
 
 public class ReadExcel {
-
+	
 	public String getValueFromExcel(String excelKey) {
 		Workbook workbook = null;
 		try {
@@ -48,5 +48,4 @@ public class ReadExcel {
 		}
 		return null;
 	}
-
 }

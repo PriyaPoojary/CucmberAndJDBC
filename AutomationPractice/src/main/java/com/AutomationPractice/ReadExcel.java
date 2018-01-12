@@ -21,9 +21,9 @@ public class ReadExcel {
 			workbook = new HSSFWorkbook(inputStream);
 			HSSFSheet sheet = (HSSFSheet) workbook.getSheetAt(0);
 			DataFormatter formatter = new DataFormatter();
-			ArrayList<String> keys = new ArrayList<>();
-			ArrayList<String> values = new ArrayList<>();
-			HashMap<String, String> map = new HashMap<>();
+			ArrayList<String> keys = new ArrayList<String>();
+			ArrayList<String> values = new ArrayList<String>();
+			HashMap<String, String> map = new HashMap<String, String>();
 
 			for (int i = 0; i <= sheet.getLastRowNum(); i++) {
 				String key;
@@ -49,3 +49,4 @@ public class ReadExcel {
 		return null;
 	}
 }
+//

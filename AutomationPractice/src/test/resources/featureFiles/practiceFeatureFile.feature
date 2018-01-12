@@ -1,8 +1,14 @@
 Feature: Title of your feature
 
-  Background: 
+  Background: For automation practice setting up background
     Given WebDriver is initialized for "browser"
-    And am able to Login "https://aso.com"
+    And i am able to launch "https://Automationpractice.com"
 
-  Scenario: abc
-    Given acc
+  Scenario: 
+    Given User clicks on Tshirts
+    And User adds one tshirt to cart
+    When user proceed to checkOut
+    And user proceeds from summary page and calculated total cost
+     
+     
+    

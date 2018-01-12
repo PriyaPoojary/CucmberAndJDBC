@@ -15,7 +15,7 @@ public class AutomationPracticeStepDefs {
 	@Given("^WebDriver is initialized for \"([^\"]*)\"$")
 	public void webdriver_is_initialized_for(String browser) throws Throwable {
 		
-		scenarioContext.driver = new AutomationBase("chrome").initWebDriver();
+		scenarioContext.driver = new AutomationBase(browser).initWebDriver();
 		scenarioContext.logger.debug("WebDriver is initialized......");
 	}
 
@@ -32,13 +32,13 @@ public class AutomationPracticeStepDefs {
 		scenarioContext.automationBase.click(scenarioContext.driver,scenarioContext.homePage.getSignIn());
 		scenarioContext.automationBase.sendKeys(scenarioContext.driver,scenarioContext.homePage.getUserName(), userName);
 		scenarioContext.automationBase.sendKeys(scenarioContext.driver,scenarioContext.homePage.getPassword(), password);
-		scenarioContext.logger.debug("credentials are entered");
+		scenarioContext.logger.debug("credentials are entered....");
 	}
 
 	@When("^user clicks on submitt button$")
 	public void user_clicks_on_submitt_button() throws Throwable {
 		scenarioContext.automationBase.click(scenarioContext.driver,scenarioContext.homePage.getSubmitBtn());
-		scenarioContext.logger.debug("clicked on Submitt Button");
+		scenarioContext.logger.debug("clicked on Submitt Button...............");
 	}
 
 	@Then("^user should be able to login$")

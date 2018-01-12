@@ -17,15 +17,12 @@ public class AutomationBase {
 	
 	public WebDriver initWebDriver() {
 		WebDriver driver;
-		
 		if (browser.equalsIgnoreCase("chrome")) {
-
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Library/chromedriver.exe");
 			driver = new ChromeDriver();
 			return driver;
 			
 		} else if (browser.equalsIgnoreCase("fireFox")) {
-
 			driver = new FirefoxDriver();
 			return driver;
 		}

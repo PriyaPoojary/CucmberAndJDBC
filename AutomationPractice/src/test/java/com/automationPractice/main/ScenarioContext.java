@@ -14,7 +14,7 @@ import com.AutomationPractice.webelements.HomePage;
 public class ScenarioContext {
 
 	public ReadExcel readExcel;
-	public Logger logger ;
+	public Logger logger;
 	public GetProperties getProperties;
 	public GetValueFromJson getValueFromJson;
 	public AutomationBase automationBase;
@@ -28,7 +28,7 @@ public class ScenarioContext {
 		logger = LogManager.getLogger(ScenarioContext.class);
 		BasicConfigurator.configure();
 		homePage = new HomePage();
-		automationBase = new AutomationBase("chrome");
+		automationBase = new AutomationBase(getProperties.getValue("browser"));
 	}
 	
 	

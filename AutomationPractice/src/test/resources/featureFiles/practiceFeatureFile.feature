@@ -1,14 +1,10 @@
 Feature: Title of your feature
 
   Background: For automation practice setting up background
-    Given WebDriver is initialized for "browser"
-    And i am able to launch "https://Automationpractice.com"
-
-  Scenario: 
-    Given User clicks on Tshirts
-    And User adds one tshirt to cart
-    When user proceed to checkOut
-    And user proceeds from summary page and calculated total cost
-     
-     
-    
+    Given WebDriver is initialized for "chrome"
+    And i am able to launch "http://Automationpractice.com/#"
+ 	
+ 	Scenario:  Login to application using valid Username and Password
+		Given user enters valid username "testuser51@test.com" and password "password"
+		When user clicks on submitt button
+		Then user should be able to login

@@ -27,9 +27,9 @@ public class ScenarioContext {
 		readExcel = new ReadExcel();
 		logger = LogManager.getLogger(ScenarioContext.class);
 		BasicConfigurator.configure();
-		automationBase = new AutomationBase("chrome");
-		driver = automationBase.initWebDriver();
 		homePage = new HomePage();
-		
+		automationBase = new AutomationBase("chrome");
 	}
+	
+	
 }

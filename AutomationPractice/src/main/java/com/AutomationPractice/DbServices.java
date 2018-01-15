@@ -7,8 +7,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DbServices {
-	
+
 	public static String abc() {
+		StringBuilder st = new StringBuilder();
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			try {
@@ -16,27 +17,26 @@ public class DbServices {
 						"jdbc:sqlserver://nv-sql-240-02.dev.kingsway.asos.com\\backoffice;integratedSecurity=true;");
 				
 				Statement stmt = conn.createStatement();
-				String sql ="select * from AsosBackoffice.dbo.Inventory where SKU='DMBTS4653'";
-				StringBuilder st = new StringBuilder();
+				
+				String sql = "select * from AsosBackoffice.dbo.Inventory where SKU='797249'";
+				
 				ResultSet result = stmt.executeQuery(sql);
-
-				while (result.next()) {
+				
+				while(result.next()){
 					st.append(result.getString("StatusID"));
 				}
 				System.out.println(st);
-				return st.toString();
-
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		return null;
+		return st.toString();
 	}
 
 	public static void main(String[] args) {
-		
-		System.out.println(abc());
+
+		System.out.println("result: "+abc());
 	}
 }

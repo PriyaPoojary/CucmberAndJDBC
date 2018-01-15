@@ -4,7 +4,6 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-
 import com.AutomationPractice.GetProperties;
 import com.AutomationPractice.GetValueFromJson;
 import com.AutomationPractice.ReadExcel;
@@ -20,6 +19,7 @@ public class ScenarioContext {
 	public AutomationBase automationBase;
 	public WebDriver driver;
 	public HomePage homePage;
+	
 	
 	public ScenarioContext(){
 		getValueFromJson = new GetValueFromJson();
